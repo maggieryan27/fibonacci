@@ -1,0 +1,41 @@
+##########
+# Fib (a,b)
+# UDF receives two numbers (a and b) and returns the next Fibonacci Number
+##########
+def Fib (a,b):
+    return a + b
+
+##########
+#
+# MAIN PROGRAM
+#
+##########
+
+# solicit user for sequence length (length must be > 2)
+i = 0
+while i != 1:
+    print ("How many Fibonacci Numbers?")
+    n = int(input("N> "))
+    if n > 2:
+        i += 1
+    else:
+        print("")
+
+# insert space to separate input and output
+print ()
+
+# the first two fibonacci numbers are 1 and 1
+F1 = F2 = 1
+print ("1) "+str(F1))
+print ("2) "+str(F2))
+
+# generate the fibonacci sequence of the specified length (HINT: while or for loop)
+x = 0
+for x in range(3, n+1): #start at 3 bc first 2 numbers already done
+    F3 = Fib(F1, F2) #define new var that will be used to 'rotate' nums
+    print(str(x) + ") " + str(F3))
+    F1 = F2
+    F2 = F3
+
+
+    
